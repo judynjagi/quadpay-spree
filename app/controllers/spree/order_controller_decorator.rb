@@ -1,6 +1,6 @@
 module Spree
   module Admin
-    module Spree::OrdersControllerDecorator
+    module OrdersControllerDecorator
       def self.prepended(base)
         base.before_action :load_quaypay_payment, only: [:quadpay_confirm, :quadpay_cancel]
       end
@@ -62,7 +62,7 @@ module Spree
   end
 end
 
-::Spree::OrdersController.prepend(Spree::Admin::Spree::OrdersControllerDecorator)
+::Spree::OrdersController.prepend(Spree::Admin::OrdersControllerDecorator)
 
 
 
