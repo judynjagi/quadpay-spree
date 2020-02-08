@@ -18,7 +18,7 @@ Gem::Specification.new do |s|
 
   spree_version = '>= 3.2.0', '< 5.0'
   s.add_dependency 'spree_core', spree_version
-  s.add_dependency 'spree_backend', spree_version
+  s.add_dependency 'spree_gateway', '>= 3.1'
 
   s.add_development_dependency 'capybara'
   s.add_development_dependency 'coffee-rails'
