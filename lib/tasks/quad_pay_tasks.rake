@@ -1,6 +1,6 @@
 namespace :quad_pay_tasks do
   task sync_orders: :environment do
-    qpms = Spree::BillingIntegration::QuadPayCheckout.available_on_front_end.active
+    qpms = Spree::NewBillingIntegration::QuadPayCheckout.available_on_front_end.active
     if qpm = qpms.first
       quad_pay_payments = quad_pay_payments(qpms)
       quad_pay_payments.each do |payment|

@@ -1,6 +1,6 @@
 require 'active_merchant/billing/quad_pay_api'
 module Spree
-  module BillingIntegration
+  module NewBillingIntegration
     class QuadPayCheckout < Spree::BillingIntegration
       include ActionView::Helpers::NumberHelper
     

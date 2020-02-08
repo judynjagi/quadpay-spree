@@ -5,7 +5,7 @@ module SpreeQuadPay
     engine_name 'spree_quad_pay'
 
     initializer 'spree.gateway.payment_methods', after: 'spree.register.payment_methods' do |app|
-      app.config.spree.payment_methods << Spree::BillingIntegration::QuadPayCheckout
+      app.config.spree.payment_methods << Spree::NewBillingIntegration::QuadPayCheckout
     end
 
     initializer 'spree_quad_pay.helpers' do

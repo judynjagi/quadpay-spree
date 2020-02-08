@@ -52,7 +52,7 @@ SpreeQuadPay
 
     * Login into Admin Dashboard and go to Configurations > Payment Method, click on button `New Payment Method`.
 
-    * On new page, at field `PROVIDER` we will choose `Spree::BillingIntegration::QuadPayCheckout` and fill data to Name and Description.
+    * On new page, at field `PROVIDER` we will choose `Spree::NewBillingIntegration::QuadPayCheckout` and fill data to Name and Description.
 
     * Click on `Create` button to create QuadPay payment method.
 
@@ -103,7 +103,7 @@ SpreeQuadPay
     rake quad_pay_tasks:sync_orders
     ```
 
-3. By default, the gem will provide Refund for Order cancel and Return Authorization. You can also use explore the built in `Spree::BillingIntegration::QuadPayCheckout` object to issue any QuadPay command supported:
+3. By default, the gem will provide Refund for Order cancel and Return Authorization. You can also use explore the built in `Spree::NewBillingIntegration::QuadPayCheckout` object to issue any QuadPay command supported:
 
     * create_order: create QuadPay Order.
     * find_order: find QuadPay Order based on token provided.

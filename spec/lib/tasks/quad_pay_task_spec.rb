@@ -7,9 +7,9 @@ describe :quad_pay_tasks do
 
   before :all do
     @qp_payment_method ||=
-      Spree::BillingIntegration::QuadPayCheckout.create(
+      Spree::NewBillingIntegration::QuadPayCheckout.create(
         name: 'QuadPayCheckout',
-        type: 'Spree::BillingIntegration::QuadPayCheckout',
+        type: 'Spree::NewBillingIntegration::QuadPayCheckout',
         description: 'QuadPayCheckout',
         active: true,
         display_on: 'both'

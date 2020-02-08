@@ -9,7 +9,7 @@ class QuadPayPaymentMethod
 
   bindingProviderChanged: ->
     $(selectors.quadPayPaymentMethodType).on 'change', (e) ->
-      if e.currentTarget.value == 'Spree::BillingIntegration::QuadPayCheckout'
+      if e.currentTarget.value == 'Spree::NewBillingIntegration::QuadPayCheckout'
         $('[data-hook="auto_capture"').hide()
         $('#billing_integration_quad_pay_checkout_preferred_test_mode').hide()
         $('[for="billing_integration_quad_pay_checkout_preferred_test_mode"').hide()

@@ -15,9 +15,9 @@ RSpec.describe Spree::CheckoutController, type: :controller do
     allow(controller).to receive_messages current_order: order
 
     @qp_payment_method ||=
-      Spree::BillingIntegration::QuadPayCheckout.create(
+      Spree::NewBillingIntegration::QuadPayCheckout.create(
         name: 'QuadPayCheckout',
-        type: 'Spree::BillingIntegration::QuadPayCheckout',
+        type: 'Spree::NewBillingIntegration::QuadPayCheckout',
         description: 'QuadPayCheckout',
         active: true,
         display_on: 'both'

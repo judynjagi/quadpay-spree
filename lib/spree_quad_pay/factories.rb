@@ -1,7 +1,7 @@
 FactoryBot.define do
-  factory :quad_pay_checkout, class: Spree::BillingIntegration::QuadPayCheckout do
+  factory :quad_pay_checkout, class: Spree::NewBillingIntegration::QuadPayCheckout do
     name 'QuadPayCheckout'
-    type 'Spree::BillingIntegration::QuadPayCheckout'
+    type 'Spree::NewBillingIntegration::QuadPayCheckout'
     description 'QuadPayCheckout'
     active true
     display_on 'both'

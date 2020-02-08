@@ -9,7 +9,7 @@ module Spree
           return unless (params[:state] == 'payment') && params[:order] && params[:order][:payments_attributes]
       
           payment_method = Spree::PaymentMethod.find(params[:order][:payments_attributes].first[:payment_method_id])
-          if payment_method && payment_method.kind_of?(Spree::BillingIntegration::QuadPayCheckout)
+          if payment_method && payment_method.kind_of?(Spree::NewBillingIntegration::QuadPayCheckout)
             if qp_order = payment_method.create_order(@order)
               if @order.update_from_params(params, permitted_checkout_attributes, request.headers.env)
                 @order.temporary_address = !params[:save_user_address]

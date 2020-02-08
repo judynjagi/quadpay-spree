@@ -1,14 +1,14 @@
 require 'spec_helper'
 
-describe Spree::BillingIntegration::QuadPayCheckout, type: :model do
+describe Spree::NewBillingIntegration::QuadPayCheckout, type: :model do
   include QuadPayApiStub
   include QuadPayResponse
 
   before :all do
     @qp_payment_method ||=
-      Spree::BillingIntegration::QuadPayCheckout.create(
+      Spree::NewBillingIntegration::QuadPayCheckout.create(
         name: 'QuadPayCheckout',
-        type: 'Spree::BillingIntegration::QuadPayCheckout',
+        type: 'Spree::NewBillingIntegration::QuadPayCheckout',
         description: 'QuadPayCheckout',
         active: true,
         display_on: 'both'
